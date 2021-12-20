@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
-    {{ text }}
+    <p>{{ text }}</p>
+    <router-link to="/">
+      Home
+    </router-link>
+    <router-link to="/course">
+      Course
+    </router-link>
+    <router-view />
   </div>
 </template>
 

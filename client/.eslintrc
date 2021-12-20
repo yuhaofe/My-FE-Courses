@@ -2,5 +2,9 @@
   "env": {
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended"]
+  "extends": ["eslint:recommended", "plugin:vue/recommended"],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"]
+  }
 }
