@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <p>{{ text }}</p>
+    <p @click="addCount">
+      {{ text }} {{ count }}
+    </p>
     <router-link to="/">
       Home
     </router-link>
@@ -16,6 +18,16 @@ export default {
   data() {
     return {
       text: 'Hello Vue!'
+    }
+  },
+  computed: {
+    count() {
+      return this.$store.state.count
+    }
+  },
+  methods: {
+    addCount() {
+      this.$store.dispatch('increment')
     }
   }
 }
