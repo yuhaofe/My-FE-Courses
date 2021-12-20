@@ -3,19 +3,17 @@
     <p @click="addCount">
       {{ text }} {{ count }}
     </p>
-    <router-link to="/">
-      Home
-    </router-link>
-    <router-link to="/course">
-      Course
-    </router-link>
     <router-view />
+    <NavBar />
   </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar'
+
 export default {
-  data() {
+  components: { NavBar },
+  data: function() {
     return {
       text: 'Hello Vue!'
     }
@@ -29,12 +27,14 @@ export default {
     addCount() {
       this.$store.dispatch('increment')
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss">
-  .hello {
-    color: red;
+  body {
+    max-width: 600px;
+    height: 100%;
+    margin: 0px auto;
   }
 </style>
