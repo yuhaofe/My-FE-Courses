@@ -11,7 +11,7 @@
       <div>
         <div class="course-card-line">
           <span class="course-card-title">{{ course.title }}</span>
-          <span class="course-card-pricing">{{ course.pricing.type === 'member' && course.pricing.cost + '/月' }}</span>
+          <span class="course-card-pricing">{{ pricingLabel }}</span>
         </div>
         <div class="course-card-line">
           <span>{{ course.author }}</span>
@@ -26,24 +26,9 @@
     <div class="course-card-row-2">
       <div class="course-card-tags">
         <CourseTag
-          name="JavaScript"
-          color="#c9b518"
-        />
-        <CourseTag
-          name="闭包"
-          color="#c9b518"
-        />
-        <CourseTag
-          name="原型"
-          color="#c9b518"
-        />
-        <CourseTag
-          name="异步"
-          color="#c9b518"
-        />
-        <CourseTag
-          name="CSS"
-          color="#0099ff"
+          v-for="tag in course.tags"
+          :key="tag"
+          :name="tag"
         />
       </div>
       <div class="course-card-feedback">
@@ -69,21 +54,47 @@ export default {
   components: {
     CourseTag
   },
-  data: function() {
-    return {
-      course: {
-        title: 'JavaScript: The Hard Parts, v2',
-        author: 'Will Sentance',
-        description: 'Go under the hood of some of the most important aspects of JavaScript! You\'ll learn what you need to know to become a sought-after, versatile, problem-solving developer. ',
-        pricing: {
-          type: 'member', // free/one-time/member
-          cost: '$39' // month fee
-        }, 
-        platform: 'Frontend Masters',
-        cover: 'https://static.frontendmasters.com/assets/courses/2020-01-07-javascript-hard-parts-v2/thumb.webp',
-        upvotes: 10,
-        comments: 10,
+  props: {
+    course: {
+      type: Object,
+      default() {
+        return {
+          id: -1,
+          title: '获取课程信息失败',
+          author: '',
+          description: '',
+          pricing: {
+            type: 'free', // free/one-time/member
+            cost: 0, // fee/month fee
+            unit: '', // $/¥/...
+          }, 
+          platform: '',
+          cover: '',
+          upvotes: 0,
+          comments: 0,
+          tags: []
+        }
       }
+    }
+  },
+  computed: {
+    pricingLabel() {
+      const pricing = this.course.pricing
+      let label = ''
+      switch(pricing.type) {
+        case 'member':
+          label += pricing.unit + pricing.cost + '/月'
+          break
+        case 'one-time':
+          label += pricing.unit + pricing.cost
+          break
+        case 'free':
+          label += '免费'
+          break
+        default:
+          break
+      }
+      return label
     }
   }
 }
