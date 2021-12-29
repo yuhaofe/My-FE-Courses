@@ -11,7 +11,7 @@ db.data = db.data || { courses: [] }
 
 const { courses } = db.data
 
-app.get('/courses', async (req, res) => {
+app.get('/courses', (req, res) => {
   res.send(courses)
 })
 
