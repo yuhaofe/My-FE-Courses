@@ -6,12 +6,7 @@
 </template>
 
 <script>
-import BaseTag from './BaseTag'
-
 export default {
-  components: {
-    BaseTag
-  },
   props: {
     name: {
       type: String,

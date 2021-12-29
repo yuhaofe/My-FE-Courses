@@ -49,11 +49,10 @@
 
 <script>
 import CourseTag from './CourseTag'
-import BaseCard from './BaseCard'
 
 export default {
   components: {
-    CourseTag, BaseCard
+    CourseTag
   },
   props: {
     course: {
