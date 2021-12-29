@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="tab-bar">
     <router-link
       to="/"
       :class="$route.path === '/' ? 'active' : ''"
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .navbar {
+  .tab-bar {
     position: fixed;
     bottom: 0px;
     width: 100%;
