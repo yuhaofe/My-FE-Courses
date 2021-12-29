@@ -15,9 +15,12 @@ const mutations = {
 const actions = {
   fetchCourses({ commit }) {
     return CourseService.getCourses()
-      .then((response) => {
+      .then(response => {
         commit('SET_COURSES', response)
         return response
+      })
+      .catch(error => {
+        console.log(error)
       })
   }
 }
