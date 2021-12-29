@@ -2,10 +2,17 @@
   "name": "my-fe-courses-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "DEBUG=express:router pm2-dev start src/server.js --ignore db.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "",
+  "dependencies": {
+    "express": "^4.17.2",
+    "lowdb": "^3.0.0"
+  },
+  "devDependencies": {
+    "pm2": "^5.1.2"
+  }
 }

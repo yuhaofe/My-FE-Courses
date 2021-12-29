@@ -1,0 +1,23 @@
+import axios from 'axios'
+
+const client = axios.create({
+  baseURL: '/api/',
+  timeout: 5000
+})
+
+client.defaults.headers.get['Accept'] = 'application/json'
+client.defaults.headers.post['Content-Type'] = 'application/json; charset=UTF-8'
+
+function getCourses() {
+  return client.get('courses/').then(response => {
+    if (response.status === 200) {
+      return response.data
+    } else {
+      return Promise.reject()
+    }
+  })
+}
+
+export default {
+  getCourses
+}

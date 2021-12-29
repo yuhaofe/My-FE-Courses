@@ -36,5 +36,10 @@ export default {
     max-width: 600px;
     height: 100%;
     margin: 0px auto;
+    background-color: #f4f4f4;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 </style>
