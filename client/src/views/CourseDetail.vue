@@ -1,104 +1,106 @@
 <template>
-  <div class="course-detail">
-    <BaseNavBar
-      :title="course.title"
-      :show-back="true"
-      :show-more="false"
-      @on-click-back="$router.go(-1)"
-    />
-    <template v-if="course.loading">
-      <div class="course-detail-loading">
-        <span>加载中...</span>
-      </div>
-    </template>
-    <template v-else>
-      <CourseActionBar :course="course" />
-      <div
-        class="course-detail-cover"
-        :style="{
-          background: 'no-repeat center center / cover',
-          backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(${course.cover})`,
-          height: '200px'
-        }"
-      >
-        <div class="course-detail-cover-text">
-          <h1>{{ course.title }}</h1>
-          <span>by {{ course.author }}</span>
+  <div class="course-detail-wrapper">
+    <div class="course-detail">
+      <BaseNavBar
+        :title="course.title"
+        :show-back="true"
+        :show-more="false"
+        @on-click-back="$router.go(-1)"
+      />
+      <template v-if="course.loading">
+        <div class="course-detail-loading">
+          <span>加载中...</span>
         </div>
-      </div>
-      <div class="course-detail-section-2col">
-        <BaseCard
-          :shadow="false"
+      </template>
+      <template v-else>
+        <div
+          class="course-detail-cover"
+          :style="{
+            background: 'no-repeat center center / cover',
+            backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(${course.cover})`,
+            height: '200px'
+          }"
         >
-          <h2>平台</h2>
-          {{ course.platform }}
-        </BaseCard>
-        <BaseCard
-          :shadow="false"
-        >
-          <h2>价格</h2>
-          {{ pricingLabel }}
-        </BaseCard>
-      </div>
-      <BaseCard
-        :shadow="false"
-        class="course-detail-section"
-      >
-        <template #header>
-          <h2>推荐原因</h2>
-        </template>
-        {{ course.reason }}
-      </BaseCard>
-      <BaseCard
-        :shadow="false"
-        class="course-detail-section"
-      >
-        <template #header>
-          <h2>简介</h2>
-        </template>
-        {{ course.description }}
-      </BaseCard>
-      <BaseCard
-        :shadow="false"
-        class="course-detail-section"
-      >
-        <template #header>
-          <h2>标签</h2>
-        </template>
-        <div class="course-detail-tags">
-          <CourseTag
-            v-for="tag in course.tags"
-            :key="tag"
-            :name="tag"
-          />
+          <div class="course-detail-cover-text">
+            <h1>{{ course.title }}</h1>
+            <span>by {{ course.author }}</span>
+          </div>
         </div>
-      </BaseCard>
-      <BaseCard
-        :shadow="false"
-        class="course-detail-section"
-      >
-        <template #header>
-          <h2>目录</h2>
-        </template>
-        <ul class="course-detail-contents">
-          <li
-            v-for="item in contentsItems"
-            :key="item"
+        <div class="course-detail-section-2col">
+          <BaseCard
+            :shadow="false"
           >
-            {{ item }}
-          </li>
-        </ul>
-      </BaseCard>
-      <BaseCard
-        :shadow="false"
-        class="course-detail-section"
-      >
-        <template #header>
-          <h2>评论</h2>
-        </template>
-        无
-      </BaseCard>
-    </template>
+            <h2>平台</h2>
+            {{ course.platform }}
+          </BaseCard>
+          <BaseCard
+            :shadow="false"
+          >
+            <h2>价格</h2>
+            {{ pricingLabel }}
+          </BaseCard>
+        </div>
+        <BaseCard
+          :shadow="false"
+          class="course-detail-section"
+        >
+          <template #header>
+            <h2>推荐原因</h2>
+          </template>
+          {{ course.reason }}
+        </BaseCard>
+        <BaseCard
+          :shadow="false"
+          class="course-detail-section"
+        >
+          <template #header>
+            <h2>简介</h2>
+          </template>
+          {{ course.description }}
+        </BaseCard>
+        <BaseCard
+          :shadow="false"
+          class="course-detail-section"
+        >
+          <template #header>
+            <h2>标签</h2>
+          </template>
+          <div class="course-detail-tags">
+            <CourseTag
+              v-for="tag in course.tags"
+              :key="tag"
+              :name="tag"
+            />
+          </div>
+        </BaseCard>
+        <BaseCard
+          :shadow="false"
+          class="course-detail-section"
+        >
+          <template #header>
+            <h2>目录</h2>
+          </template>
+          <ul class="course-detail-contents">
+            <li
+              v-for="item in contentsItems"
+              :key="item"
+            >
+              {{ item }}
+            </li>
+          </ul>
+        </BaseCard>
+        <BaseCard
+          :shadow="false"
+          class="course-detail-section"
+        >
+          <template #header>
+            <h2>评论</h2>
+          </template>
+          无
+        </BaseCard>
+        <CourseActionBar :course="course" />
+      </template>
+    </div>
   </div>
 </template>
 
@@ -119,7 +121,6 @@ export default {
           loading: true
         } 
       }
-      console.log(course)
       return course
     },
     pricingLabel() {
@@ -156,7 +157,12 @@ export default {
 .course-detail {
   padding-top: 48px;
   padding-bottom: 80px;
-  
+
+  &-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+
   &-loading {
     width: 100%;
     height: 100vh;

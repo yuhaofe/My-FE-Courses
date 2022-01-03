@@ -1,7 +1,6 @@
 <template>
   <div
     class="tab-bar"
-    :class="`tab-bar-${show ? 'show' : 'hide'}`"
   >
     <router-link
       to="/"
@@ -26,12 +25,7 @@
 
 <script>
 export default {
-  computed: {
-    show() {
-      const tabsPath = ['/', '/favorites', '/my']
-      return tabsPath.includes(this.$route.path)
-    }
-  }
+
 }
 </script>
 
@@ -44,15 +38,9 @@ export default {
     border-top: 1px solid rgba(0, 0, 0, 0.04);
     z-index: 1;
 
-    &-show {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
-    
-    &-hide {
-      display: none;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     a {
       flex: 1 1 0;

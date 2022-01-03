@@ -48,7 +48,7 @@ export default {
 <style lang="scss">
 .base-nav-bar {
   position: fixed;
-  top: 0px;
+  top: 0;
   width: 100%;
   max-width: 600px;
   height: 48px;
