@@ -12,6 +12,7 @@
       </div>
     </template>
     <template v-else>
+      <CourseActionBar :course="course" />
       <div
         class="course-detail-cover"
         :style="{
@@ -103,10 +104,11 @@
 
 <script>
 import CourseTag from '../components/CourseTag'
+import CourseActionBar from '../components/CourseActionBar'
 
 export default {
   components: {
-    CourseTag
+    CourseTag, CourseActionBar
   },
   computed: {
     course() {
@@ -152,11 +154,12 @@ export default {
 
 <style lang="scss">
 .course-detail {
-  padding-top: 50px;
-
+  padding-top: 48px;
+  padding-bottom: 80px;
+  
   &-loading {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -189,10 +192,10 @@ export default {
   }
 
   &-section {
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
 
     &-2col {
-      margin-bottom: 10px;
+      margin: 0 10px 10px 10px;
 
       display: flex;
       flex-direction: row;

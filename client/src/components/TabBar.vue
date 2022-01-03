@@ -41,7 +41,7 @@ export default {
     bottom: 0px;
     width: 100%;
     max-width: 600px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
     z-index: 1;
 
     &-show {
