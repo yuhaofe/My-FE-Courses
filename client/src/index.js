@@ -4,9 +4,10 @@ import router from './router'
 import store from './store'
 import BaseCard from './components/BaseCard'
 import BaseTag from './components/BaseTag'
+import BaseNavBar from './components/BaseNavBar'
 
 const baseComponents = {
-  BaseCard, BaseTag
+  BaseCard, BaseTag, BaseNavBar
 }
 
 Object.entries(baseComponents)

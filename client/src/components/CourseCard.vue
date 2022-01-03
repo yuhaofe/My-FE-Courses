@@ -1,50 +1,55 @@
 <template>
-  <BaseCard :shadow="false">
-    <div class="course-card-body">
-      <div>
-        <img
-          :src="course.cover"
-          alt="课程封面"
-        >
-      </div>
-      <div>
-        <div class="course-card-line">
-          <span class="course-card-title">{{ course.title }}</span>
-          <span class="course-card-pricing">{{ pricingLabel }}</span>
-        </div>
-        <div class="course-card-line">
-          <span>{{ course.author }}</span>
-          <span>{{ course.platform }}</span>
-        </div>
-        <div class="course-card-desc">
-          {{ course.description }}
-        </div>
-      </div>
-    </div>
-    <template #footer>
-      <div class="course-card-footer">
-        <div class="course-card-tags">
-          <CourseTag
-            v-for="tag in course.tags"
-            :key="tag"
-            :name="tag"
-          />
-        </div>
-        <div class="course-card-feedback">
+  <router-link
+    :to="'/course/' + course.id"
+    tag="div"
+  >
+    <BaseCard :shadow="false">
+      <div class="course-card-body">
+        <div>
           <img
-            src="../assets/upvote.png"
-            alt="点赞"
+            :src="course.cover"
+            alt="课程封面"
           >
-          <span>{{ course.upvotes }}</span>
-          <img
-            src="../assets/comment.png"
-            alt="评论"
-          >
-          <span>{{ course.comments }}</span>
+        </div>
+        <div>
+          <div class="course-card-line">
+            <span class="course-card-title">{{ course.title }}</span>
+            <span class="course-card-pricing">{{ pricingLabel }}</span>
+          </div>
+          <div class="course-card-line">
+            <span>{{ course.author }}</span>
+            <span>{{ course.platform }}</span>
+          </div>
+          <div class="course-card-desc">
+            {{ course.description }}
+          </div>
         </div>
       </div>
-    </template>
-  </BaseCard>
+      <template #footer>
+        <div class="course-card-footer">
+          <div class="course-card-tags">
+            <CourseTag
+              v-for="tag in course.tags"
+              :key="tag"
+              :name="tag"
+            />
+          </div>
+          <div class="course-card-feedback">
+            <img
+              src="../assets/upvote.png"
+              alt="点赞"
+            >
+            <span>{{ course.upvotes }}</span>
+            <img
+              src="../assets/comment.png"
+              alt="评论"
+            >
+            <span>{{ course.comments }}</span>
+          </div>
+        </div>
+      </template>
+    </BaseCard>
+  </router-link>
 </template>
 
 <script>
@@ -95,6 +100,11 @@ export default {
           break
       }
       return label
+    }
+  },
+  methods: {
+    navigateToCourseDetail() {
+
     }
   }
 }

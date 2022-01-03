@@ -2,6 +2,7 @@
   <div
     class="base-card"
     :class="shadow ? 'shadow-on' : 'shadow-off'"
+    v-on="$listeners"
   >
     <div
       v-if="$slots.header"

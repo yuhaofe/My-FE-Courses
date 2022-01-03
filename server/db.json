@@ -1,6 +1,7 @@
 {
   "courses": [
     {
+      "id": "1",
       "title": "JavaScript: The Hard Parts, v2",
       "author": "Will Sentance",
       "description": "Go under the hood of some of the most important aspects of JavaScript! You'll learn what you need to know to become a sought-after, versatile, problem-solving developer. ",
