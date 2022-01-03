@@ -1,5 +1,8 @@
 <template>
-  <div class="navbar">
+  <div
+    class="tab-bar"
+    :class="`tab-bar-${show ? 'show' : 'hide'}`"
+  >
     <router-link
       to="/"
       :class="$route.path === '/' ? 'active' : ''"
@@ -23,21 +26,33 @@
 
 <script>
 export default {
-
+  computed: {
+    show() {
+      const tabsPath = ['/', '/favorites', '/my']
+      return tabsPath.includes(this.$route.path)
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-  .navbar {
+  .tab-bar {
     position: fixed;
     bottom: 0px;
     width: 100%;
     max-width: 600px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    z-index: 1;
+
+    &-show {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
     
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    &-hide {
+      display: none;
+    }
 
     a {
       flex: 1 1 0;

@@ -1,50 +1,55 @@
 <template>
-  <div class="course-card">
-    <!-- row 1 -->
-    <div class="course-card-row-1">
-      <div>
-        <img
-          :src="course.cover"
-          alt="课程封面"
-        >
-      </div>
-      <div>
-        <div class="course-card-line">
-          <span class="course-card-title">{{ course.title }}</span>
-          <span class="course-card-pricing">{{ pricingLabel }}</span>
+  <router-link
+    :to="'/course/' + course.id"
+    tag="div"
+  >
+    <BaseCard :shadow="false">
+      <div class="course-card-body">
+        <div>
+          <img
+            :src="course.cover"
+            alt="课程封面"
+          >
         </div>
-        <div class="course-card-line">
-          <span>{{ course.author }}</span>
-          <span>{{ course.platform }}</span>
+        <div>
+          <div class="course-card-line">
+            <span class="course-card-title">{{ course.title }}</span>
+            <span class="course-card-pricing">{{ pricingLabel }}</span>
+          </div>
+          <div class="course-card-line">
+            <span>{{ course.author }}</span>
+            <span>{{ course.platform }}</span>
+          </div>
+          <div class="course-card-reason">
+            {{ course.reason }} 
+          </div>
         </div>
-        <div class="course-card-desc">
-          {{ course.description }}
+      </div>
+      <template #footer>
+        <div class="course-card-footer">
+          <div class="course-card-tags">
+            <CourseTag
+              v-for="tag in course.tags"
+              :key="tag"
+              :name="tag"
+            />
+          </div>
+          <div class="course-card-feedback">
+            <img
+              src="../assets/upvote.png"
+              alt="点赞"
+            >
+            <span>{{ course.upvotes }}</span>
+            <img
+              src="../assets/comment.png"
+              alt="评论"
+            >
+            <span>{{ course.comments }}</span>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- row 2 -->
-    <div class="course-card-row-2">
-      <div class="course-card-tags">
-        <CourseTag
-          v-for="tag in course.tags"
-          :key="tag"
-          :name="tag"
-        />
-      </div>
-      <div class="course-card-feedback">
-        <img
-          src="../assets/upvote.png"
-          alt="点赞"
-        >
-        <span>{{ course.upvotes }}</span>
-        <img
-          src="../assets/comment.png"
-          alt="评论"
-        >
-        <span>{{ course.comments }}</span>
-      </div>
-    </div>
-  </div>
+      </template>
+    </BaseCard>
+  </router-link>
 </template>
 
 <script>
@@ -62,7 +67,7 @@ export default {
           id: -1,
           title: '获取课程信息失败',
           author: '',
-          description: '',
+          reason: '',
           pricing: {
             type: 'free', // free/one-time/member
             cost: 0, // fee/month fee
@@ -96,21 +101,21 @@ export default {
       }
       return label
     }
+  },
+  methods: {
+    navigateToCourseDetail() {
+
+    }
   }
 }
 </script>
 
 <style lang="scss">
 .course-card {
-  width: 100%;
-  padding: 10px;
-  font-size: 12px;
-  background-color: #ffffff;
-
-  &-row-1 {
+  &-body {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    //align-items: center;
 
     > div:first-of-type {
       flex: 0 0 auto;
@@ -133,10 +138,9 @@ export default {
     }
   }
 
-  &-row-2 {
+  &-footer {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
 
     > div:first-of-type {
       flex: 1 1 auto;
@@ -179,7 +183,7 @@ export default {
     font-weight: bold;
   }
 
-  &-desc {
+  &-reason {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;

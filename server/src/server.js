@@ -11,8 +11,14 @@ db.data = db.data || { courses: [] }
 
 const { courses } = db.data
 
-app.get('/courses', async (req, res) => {
+app.get('/courses', (req, res) => {
   res.send(courses)
+})
+
+app.get('/course/:id', (req, res) => {
+  const course = courses.find(c => c.id === req.params.id) 
+  setTimeout(() => res.send(course), 2000)
+  
 })
 
 app.listen(3000, () => {

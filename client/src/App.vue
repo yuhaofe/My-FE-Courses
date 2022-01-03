@@ -1,32 +1,25 @@
 <template>
-  <div class="hello">
-    <p @click="addCount">
-      {{ text }} {{ count }}
-    </p>
+  <div>
     <router-view />
-    <NavBar />
+    <TabBar />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
+import TabBar from './components/TabBar'
 
 export default {
-  components: { NavBar },
+  components: { TabBar },
   data: function() {
     return {
-      text: 'Hello Vue!'
+
     }
   },
   computed: {
-    count() {
-      return this.$store.state.count
-    }
+
   },
   methods: {
-    addCount() {
-      this.$store.dispatch('increment')
-    }
+
   },
 }
 </script>
