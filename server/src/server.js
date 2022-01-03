@@ -3,6 +3,7 @@ import { Low, JSONFile } from 'lowdb'
 
 const app = express()
 app.use(express.json())
+app.use((req, res, next) => setTimeout(next, 500))
 
 const adapter = new JSONFile('db.json')
 const db = new Low(adapter)
@@ -17,8 +18,7 @@ app.get('/courses', (req, res) => {
 
 app.get('/course/:id', (req, res) => {
   const course = courses.find(c => c.id === req.params.id) 
-  setTimeout(() => res.send(course), 2000)
-  
+  res.send(course)
 })
 
 app.listen(3000, () => {
