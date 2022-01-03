@@ -18,6 +18,16 @@ function getCourses() {
   })
 }
 
+function getCourse(id) {
+  return client.get('course/' + id).then(response => {
+    if (response.status === 200) {
+      return response.data
+    } else {
+      return Promise.reject()
+    }
+  })
+}
+
 export default {
-  getCourses
+  getCourses, getCourse
 }

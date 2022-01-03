@@ -53,7 +53,8 @@ export default {
   max-width: 600px;
   height: 48px;
   background-color: white;
-
+  z-index: 10;
+  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -66,8 +67,10 @@ export default {
 
   &-title {
     flex: 1 1 auto;
-    font-size: 24px;
-    
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-more {

@@ -15,6 +15,12 @@ app.get('/courses', (req, res) => {
   res.send(courses)
 })
 
+app.get('/course/:id', (req, res) => {
+  const course = courses.find(c => c.id === req.params.id) 
+  setTimeout(() => res.send(course), 2000)
+  
+})
+
 app.listen(3000, () => {
   console.log(`Server listening at http://localhost:3000`)
 })

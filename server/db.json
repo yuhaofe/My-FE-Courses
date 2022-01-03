@@ -4,7 +4,9 @@
       "id": "1",
       "title": "JavaScript: The Hard Parts, v2",
       "author": "Will Sentance",
-      "description": "Go under the hood of some of the most important aspects of JavaScript! You'll learn what you need to know to become a sought-after, versatile, problem-solving developer. ",
+      "reason": "通过图示生动形象地解释了函数执行、闭包、事件循环、对象原型等JavaScript重要概念",
+      "description": "Go under the hood of some of the most important aspects of JavaScript! You'll learn what you need to know to become a sought-after, versatile, problem-solving developer. Combining mental models of JavaScript's inner workings and hands-on programming challenges, this course will give you a solid understanding of callbacks and higher-order functions, closure, asynchronous JavaScript, and object-oriented JavaScript! This course is for developers with a basic to intermediate knowledge of JavaScript who wants to deepen their understanding of the fundamentals to the next level.",
+      "contents": "Introduction\nJavaScript Principles\nFunctions & Callbacks\nClosure\nAsynchronous JavaScript\nPromises\nClasses & Prototypes\nWrapping Up",
       "pricing": {
         "type": "member",
         "cost": "39",

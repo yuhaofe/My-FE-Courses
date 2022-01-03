@@ -20,8 +20,8 @@
             <span>{{ course.author }}</span>
             <span>{{ course.platform }}</span>
           </div>
-          <div class="course-card-desc">
-            {{ course.description }}
+          <div class="course-card-reason">
+            {{ course.reason }} 
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default {
           id: -1,
           title: '获取课程信息失败',
           author: '',
-          description: '',
+          reason: '',
           pricing: {
             type: 'free', // free/one-time/member
             cost: 0, // fee/month fee
@@ -115,7 +115,7 @@ export default {
   &-body {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    //align-items: center;
 
     > div:first-of-type {
       flex: 0 0 auto;
@@ -183,7 +183,7 @@ export default {
     font-weight: bold;
   }
 
-  &-desc {
+  &-reason {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;

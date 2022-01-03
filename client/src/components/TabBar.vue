@@ -42,7 +42,8 @@ export default {
     width: 100%;
     max-width: 600px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    
+    z-index: 1;
+
     &-show {
       display: flex;
       flex-direction: row;
