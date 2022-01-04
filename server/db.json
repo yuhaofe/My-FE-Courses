@@ -4,9 +4,10 @@
       "id": "1",
       "title": "JavaScript: The Hard Parts, v2",
       "author": "Will Sentance",
-      "reason": "通过图示生动形象地解释了函数执行、闭包、事件循环、对象原型等JavaScript重要概念",
+      "reason": "Codesmith CEO通过图示生动形象地为你解释函数执行、闭包、事件循环、对象原型等JavaScript重要概念",
       "description": "Go under the hood of some of the most important aspects of JavaScript! You'll learn what you need to know to become a sought-after, versatile, problem-solving developer. Combining mental models of JavaScript's inner workings and hands-on programming challenges, this course will give you a solid understanding of callbacks and higher-order functions, closure, asynchronous JavaScript, and object-oriented JavaScript! This course is for developers with a basic to intermediate knowledge of JavaScript who wants to deepen their understanding of the fundamentals to the next level.",
       "contents": "Introduction\nJavaScript Principles\nFunctions & Callbacks\nClosure\nAsynchronous JavaScript\nPromises\nClasses & Prototypes\nWrapping Up",
+      "language": "英文",
       "pricing": {
         "type": "member",
         "cost": "39",
@@ -21,8 +22,58 @@
         "JavaScript",
         "闭包",
         "异步",
-        "原型",
-        "CSS"
+        "原型"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Deep JavaScript Foundations, v3",
+      "author": "Kyle Simpson",
+      "reason": "《你不知道的JavaScript》系列书籍的作者带你一起深入学习JavaScript语言核心的类型和类型转换、作用域和闭包、面向对象和原型等重点内容",
+      "description": "Dive into the core pillars of the JavaScript language with Kyle Simpson, author of the popular, You Don't Know JS, book series. You'll learn JavaScript's types, how to convert between them, and compare them with == and ===. You'll also learn lexical scope and closure. As well as the objects oriented system (this, prototypes and classes).",
+      "contents": "Introduction\nTypes\nCoercion\nPhilosophy of Coercion\nEquality\nStatic Typing\nScope\nScope & Function Expressions\nAdvanced Scope\nClosure\nObjects\nPrototypes\nWrapping Up",
+      "language": "英文",
+      "pricing": {
+        "type": "member",
+        "cost": "39",
+        "unit": "$"
+      },
+      "platform": "Frontend Masters",
+      "cover": "https://static.frontendmasters.com/assets/courses/2019-04-03-deep-javascript-v3/thumb.webp",
+      "url": "https://frontendmasters.com/courses/deep-javascript-v3/",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "JavaScript",
+        "类型",
+        "闭包",
+        "原型"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "浏览器工作原理与实践",
+      "author": "李兵",
+      "reason": "前盛大创新院高级研究员用深入浅出的讲解方式、图文并茂的展现形式，把网络、页面渲染、JavaScript、浏览器安全等知识串联起来，让你系统地掌握浏览器工作原理，并同时把理论应用到前端实践中去",
+      "description": "浏览器是上网的入口，是互联网的“咽喉”。我们每天的工作、学习和娱乐等都离不开浏览器，各行各业、越来越多的应用也都依赖于此，特别是随着云计算的普及和 HTML5 技术的快速发展，它的重要性更是与日俱增。\n为了能准确评估 Web 开发项目的可行性，站在更高维度审视页面，以及在快节奏的前端技术迭代中把握住问题的本质，完成前端技能进阶，学习浏览器的工作原理就势在必行了。\n特别是前端技术出现了大爆炸式增长，各种新技术层出不穷，为了避免疲于应付，你可以通过学习浏览器的工作原理，掌握前端知识的本源，以不变应万变。\n在这门讲解浏览器工作原理的课程中，李兵会用深入浅出的讲解方式、图文并茂的展现形式，把网络、页面渲染、JavaScript、浏览器安全等知识串联起来，从而让你高质量、高效率地学习这门课程，系统掌握浏览器工作原理，并同时把理论应用到前端实践中去。",
+      "contents": "宏观视角下的浏览器\n浏览器中的 JavaScript 执行机制\nV8 工作原理\n浏览器中的页面事件循环系统\n浏览器中的页面\n浏览器中的网络\n浏览器安全",
+      "language": "中文",
+      "pricing": {
+        "type": "one-time",
+        "cost": "129",
+        "unit": "¥"
+      },
+      "platform": "极客时间",
+      "cover": "https://static001.geekbang.org/resource/image/c0/13/c033114ded4496a2eef2d7c012f10613.png?x-oss-process=image/resize,w_501,h_501/format,webp",
+      "url": "https://time.geekbang.org/column/intro/100033601",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "JavaScript",
+        "浏览器",
+        "V8",
+        "网络",
+        "安全"
       ]
     }
   ]

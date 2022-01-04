@@ -26,12 +26,18 @@
             <span>by {{ course.author }}</span>
           </div>
         </div>
-        <div class="course-detail-section-2col">
+        <div class="course-detail-section-3col">
           <BaseCard
             :shadow="false"
           >
             <h2>平台</h2>
             {{ course.platform }}
+          </BaseCard>
+          <BaseCard
+            :shadow="false"
+          >
+            <h2>语言</h2>
+            {{ course.language }}
           </BaseCard>
           <BaseCard
             :shadow="false"
@@ -200,17 +206,17 @@ export default {
   &-section {
     margin: 0 10px 10px 10px;
 
-    &-2col {
+    &-3col {
       margin: 0 10px 10px 10px;
 
       display: flex;
       flex-direction: row;
       
       > * {
-        flex: 1 1 0;
+        flex: 1 1 auto;
       }
 
-      > *:last-child {
+      > *:not(:first-child) {
         margin-left: 10px;
       }
 
