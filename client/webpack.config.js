@@ -7,6 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'main.js',
     assetModuleFilename: 'images/[hash][ext][query]',
   },
@@ -44,4 +45,7 @@ module.exports = {
     extensions: ['.vue', '.js', '.json'],
   },
   devtool: 'source-map',
+  devServer: {
+    historyApiFallback: true,
+  }
 }
