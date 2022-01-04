@@ -62,7 +62,14 @@
           <template #header>
             <h2>简介</h2>
           </template>
-          {{ course.description }}
+          <div class="course-detail-desc">
+            <p
+              v-for="paragraph in descParagraphs"
+              :key="paragraph"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
         </BaseCard>
         <BaseCard
           :shadow="false"
@@ -146,6 +153,11 @@ export default {
           break
       }
       return label
+    },
+    descParagraphs() {
+      const description = this.course.description
+      let paragraphs = description.split(/\r?\n/g)
+      return paragraphs
     },
     contentsItems() {
       const contents = this.course.contents
@@ -240,6 +252,13 @@ export default {
   &-contents {
     padding-left: 20px;
     margin: 0;
+  }
+
+  &-desc {
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
   }
 }
 </style>

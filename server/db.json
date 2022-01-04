@@ -5,7 +5,7 @@
       "title": "JavaScript: The Hard Parts, v2",
       "author": "Will Sentance",
       "reason": "Codesmith CEO通过图示生动形象地为你解释函数执行、闭包、事件循环、对象原型等JavaScript重要概念",
-      "description": "Go under the hood of some of the most important aspects of JavaScript! You'll learn what you need to know to become a sought-after, versatile, problem-solving developer. Combining mental models of JavaScript's inner workings and hands-on programming challenges, this course will give you a solid understanding of callbacks and higher-order functions, closure, asynchronous JavaScript, and object-oriented JavaScript! This course is for developers with a basic to intermediate knowledge of JavaScript who wants to deepen their understanding of the fundamentals to the next level.",
+      "description": "Go under the hood of some of the most important aspects of JavaScript!\nYou'll learn what you need to know to become a sought-after, versatile, problem-solving developer. Combining mental models of JavaScript's inner workings and hands-on programming challenges, this course will give you a solid understanding of callbacks and higher-order functions, closure, asynchronous JavaScript, and object-oriented JavaScript!\nThis course is for developers with a basic to intermediate knowledge of JavaScript who wants to deepen their understanding of the fundamentals to the next level.",
       "contents": "Introduction\nJavaScript Principles\nFunctions & Callbacks\nClosure\nAsynchronous JavaScript\nPromises\nClasses & Prototypes\nWrapping Up",
       "language": "英文",
       "pricing": {
@@ -30,7 +30,7 @@
       "title": "Deep JavaScript Foundations, v3",
       "author": "Kyle Simpson",
       "reason": "《你不知道的JavaScript》系列书籍的作者带你一起深入学习JavaScript语言核心的类型和类型转换、作用域和闭包、面向对象和原型等重点内容",
-      "description": "Dive into the core pillars of the JavaScript language with Kyle Simpson, author of the popular, You Don't Know JS, book series. You'll learn JavaScript's types, how to convert between them, and compare them with == and ===. You'll also learn lexical scope and closure. As well as the objects oriented system (this, prototypes and classes).",
+      "description": "Dive into the core pillars of the JavaScript language with Kyle Simpson, author of the popular, You Don't Know JS, book series.\nYou'll learn JavaScript's types, how to convert between them, and compare them with == and ===. You'll also learn lexical scope and closure. As well as the objects oriented system (this, prototypes and classes).",
       "contents": "Introduction\nTypes\nCoercion\nPhilosophy of Coercion\nEquality\nStatic Typing\nScope\nScope & Function Expressions\nAdvanced Scope\nClosure\nObjects\nPrototypes\nWrapping Up",
       "language": "英文",
       "pricing": {
