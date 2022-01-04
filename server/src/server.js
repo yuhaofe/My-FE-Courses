@@ -13,7 +13,7 @@ db.data = db.data || { courses: [] }
 const { courses } = db.data
 
 app.get('/courses', (req, res) => {
-  res.send(courses)
+  res.send(courses.sort((a, b) => b.id - a.id))
 })
 
 app.get('/course/:id', (req, res) => {

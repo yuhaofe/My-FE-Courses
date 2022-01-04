@@ -33,9 +33,5 @@ export default {
   > *:not(:first-child) {
     margin-top: 10px;
   }
-
-  > :last-child {
-    margin-bottom: 80px;
-  }
 }
 </style>

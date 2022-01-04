@@ -75,6 +75,116 @@
         "网络",
         "安全"
       ]
+    },
+    {
+      "id": "4",
+      "title": "重学前端",
+      "author": "程劭非（winter）",
+      "reason": "前手机淘宝前端负责人带你告别零散和盲目的自学，重新学习前端，一起搭建前端知识框架，共同明确学习重点，精进前端技术",
+      "description": "随着前端技术不断地发展，岗位需求与薪资一路攀升。整个前端业界正值“黄金时代”，而前端开发者们却似乎“学不动了”。\n这缘于前端的学习是一条先快后慢的曲线。在快速入门之后，大多数人都会感觉：自己仅仅停留在会用的阶段，后面的学习之路似乎越来越陡峭，每前进一步都十分艰难。\n其实是你没有意识到，你在自学的过程中走了太多弯路。\n大部分前端工程师的知识，其实都来自于工作中零散的学习和实践。在这种情况下，学习方向一旦偏离，就可能导致基础不牢固，知识认知不清晰，难以建立完整的知识体系。\n并且，如果所在公司业务简单，工程师更难以在实践中形成技术积累，这导致了自身技术长期处于非常初级的阶段。\nwinter 在手机淘宝一直负责前端工程师的面试与培养工作，他深知其中的痛点与难点。在这个专栏中，winter 将带你告别零散和盲目的自学，重新学习前端，一起搭建前端知识框架，共同明确学习重点，精进前端技术。",
+      "contents": "JavaScript\nHTML 和 CSS\n浏览器实现原理与 API\n前端综合应用",
+      "language": "中文",
+      "pricing": {
+        "type": "one-time",
+        "cost": "129",
+        "unit": "¥"
+      },
+      "platform": "极客时间",
+      "cover": "https://static001.geekbang.org/resource/image/fe/97/fe4c10236b3eee473df684dc50610c97.png?x-oss-process=image/resize,w_501,h_501/format,webp",
+      "url": "https://time.geekbang.org/column/intro/100023201",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "JavaScript",
+        "CSS",
+        "浏览器",
+        "性能",
+        "工具链",
+        "持续集成"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Web 协议详解与抓包实战",
+      "author": "陶辉",
+      "reason": "智链达 CTO 带你深入理解常用 Web 协议，让你能够快速定位和解决工作中的各种网络疑难杂症，同时也为后续进行更复杂、难度更高的分布式系统架构设计等工作打下坚实的基础",
+      "description": "不少工程师在工作中多多少少都会遇到下面的困惑，比如：\nAJAX 跨域访问时总被浏览器的同源策略阻止，其背后的原理及符合其设计思想的解决方案是什么？\n当我们维护 HTTPS 连接时，如果要优化 TLS/SSL 的卸载性能，应该从哪里入手？\n定位问题时，发现本地的 TCP 连接状态中出现了 FIN_WAIT、CLOSE_WAIT 或者 TIME_WAIT，都是什么原因引起的？应该怎样解决？\n想要提升 TCP 连接的传输速度，可服务器上相关的系统参数多达数十个，究竟该怎么调整？\n你会发现，这些问题其实都和 Web 协议密切相关。无论你是前后端工程师，还是运维测试，如果想面试更高的职位，或者要站在更高的角度去理解技术业务架构，并能在问题出现时快速、高效地解决问题，Web 协议一定是你绕不过去的一道坎。\n因此，我们和陶辉老师合作推出了这门课程，旨在帮助你对各种常用 Web 协议有一个系统、深度的理解，在此基础上你将能够快速定位和解决工作中的各种网络疑难杂症，同时也为后续进行更复杂、难度更高的分布式系统架构设计等工作打下坚实的基础。",
+      "contents": "HTTP/1.1协议\nWebSocket协议\nHTTP/2协议\nTLS/SSL协议\nTCP协议\nIP协议",
+      "language": "中文",
+      "pricing": {
+        "type": "one-time",
+        "cost": "199",
+        "unit": "¥"
+      },
+      "platform": "极客时间",
+      "cover": "https://static001.geekbang.org/resource/image/47/1c/47f2589e91f68368a4d4dc15986fde1c.png?x-oss-process=image/resize,w_501,h_501/format,webp",
+      "url": "https://time.geekbang.org/course/intro/100026801",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "网络",
+        "HTTP",
+        "HTTPS",
+        "WebSocket",
+        "TCP",
+        "IP"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "React - The Complete Guide",
+      "author": "Maximilian Schwarzmüller",
+      "reason": "大而全的\"React从入门到精通\"课程，几乎覆盖了成为一个React开发者需要学习的方方面面，可以学习到React、Hooks、Redux、React Router以及Next.js等等知识",
+      "description": "This course will teach you React.js in a practice-oriented way, using all the latest patterns and best practices you need. You will learn all the key fundamentals as well as advanced concepts and related topics to turn you into a React.js developer.\nThis is a huge course because it really covers EVERYTHING you need to know and learn to become a React.js developer!\nNo matter if you know nothing about React or if you already got some basic React knowledge (not required but also not a problem), you will get tons of useful information and knowledge out of this course!\nMy goal with this course is to ensure that you feel confident working with React, so that you can apply for React jobs, use it in your own projects or simply enhance your portfolio as a developer - whatever your goal is: This course gets you there!",
+      "contents": "Getting Started\nJavaScript Refresher\nReact Basics & Working With Components\nReact State & Working with Events\nRendering Lists & Conditional Content\nStyling React Components\nDebugging React Apps\nTime to Practice: A Complete Practice Project\nDiving Deeper: Working with Fragments, Portals & \"Refs\"\nAdvanced: Handling Side Effects, Using Reducers & Using the Context API\nPractice Project: Building a Food Order App\nA Look Behind The Scenes Of React & Optimization Techniques\nAn Alternative Way Of Building Components: Class-based Components\nSending Http Requests (e.g. Connecting to a Database)\nBuilding Custom React Hooks\nWorking with Forms & User Input\nPractice Project: Adding Http & Forms To The Food Order App\nDiving into Redux (An Alternative To The Context API)\nAdvanced Redux\nBuilding a Multi-Page SPA with React Router\nDeploying React Apps\nAdding Authentication To React Apps\nA (Pretty Deep Dive) Introduction to Next.js\nAnimating React Apps\nReplacing Redux with React Hooks\nTesting React Apps (Unit Tests)\nReact + TypeScript\nOptional: React Hooks Introduction & Summary\nOptional: React Summary & Core Feature Walkthrough\nCourse Roundup\nThis Course Got Updated!",
+      "language": "英文",
+      "pricing": {
+        "type": "one-time",
+        "cost": "129",
+        "unit": "$"
+      },
+      "platform": "Udemy",
+      "cover": "https://img-c.udemycdn.com/course/480x270/1362070_b9a1_2.jpg",
+      "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "React",
+        "React Hooks",
+        "React Router",
+        "Redux",
+        "Next.js",
+        "CSS-in-JS",
+        "CSS Modules",
+        "TypeScript",
+        "单元测试"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Vue - The Complete Guide",
+      "author": "Maximilian Schwarzmüller",
+      "reason": "大而全的\"Vue从入门到精通\"课程，几乎覆盖了成为一个Vue开发者需要学习的方方面面，可以学习到Vue 3、Vue 2、Vue Router、Vuex等等知识",
+      "description": "This bestselling course teaches the latest version of Vue (Vue.js 3) from the ground up and in great detail. We'll cover all the core basics but we'll not stop thereafter - this course also dives into advanced concepts like the Composition API introduced with Vue 3.\nFrontend frameworks like Vue JS are extremely popular because they give us this reactive, great user experience we know from mobile apps - but now in the browser! No wonder that jobs requiring frontend framework skills like VueJS are amongst the best paid ones in the industry!\nYou may know Angular 2+ and ReactJS, well, VueJS combines the best of both frameworks and makes building anything from small widgets to big, enterprise-level apps a breeze and a whole lot of fun!\nAnd if you don't know the two mentioned frameworks: That's fine, too, this course does not expect any knowledge of any other frontend framework - you will learn it all throughout this Course!\nThis course covers it all!",
+      "contents": "Getting Started\nBasics & Core Concepts - DOM Interaction with Vue\nRendering Conditional Content & Lists\nCourse Project: The Monster Slayer Game\nVue: Behind the Scenes\nIntroducing Components\nMoving to a Better Development Setup & Workflow with the Vue CLI\nComponent Communication\nDiving Deeper Into Components\nCourse Project: The Learning Resources App\nForms\nSending Http Requests\nRouting: Building \"Multi-Page\" Single Page Applications\nAnimations & Transitions\nVuex\nMain Project: \"Find a Coach\" Web App\nVue & Authentication\nOptimizing & Deploying Vue Apps\nThe Composition API - Replacing the Options API\nReusing Functionality: Mixins & Custom Composition Functions\nRoundup & Next Steps\nVue 2 to Vue 3 Migration\nGetting Started [VUE2]\nUsing VueJS to Interact with the DOM [VUE2]\nUsing Conditionals and Rendering Lists [VUE2]\nFirst Course Project - The Monster Slayer [VUE2]\nUnderstanding the VueJS Instance [VUE2]\nMoving to a \"Real\" Development Workflow with Webpack and Vue CLI [VUE2]\nAn Introduction to Components [VUE2]\nCommunicating between Components [VUE2]\nAdvanced Component Usage [VUE2]\nSecond Course Project - Wonderful Quotes [VUE2]\nHandling User Input with Forms [VUE2]\nUsing and Creating Directives [VUE2]\nImproving your App with Filters and Mixins [VUE2]\nAdding Animations and Transitions [VUE2]\nConnecting to Servers via Http - Using vue-resource [VUE2]\nRouting in a VueJS Application [VUE2]\nBetter State Management with Vuex [VUE2]\nFinal Project - The Stock Trader [VUE2]\nDeploying a VueJS Application [VUE2]\nBonus: Using Axios instead of vue-resource [VUE2]\nBonus: Authentication in Vue Apps\nMore Content",
+      "language": "英文",
+      "pricing": {
+        "type": "one-time",
+        "cost": "84.99",
+        "unit": "$"
+      },
+      "platform": "Udemy",
+      "cover": "https://img-c.udemycdn.com/course/480x270/995016_ebf4_3.jpg",
+      "url": "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
+      "upvotes": 10,
+      "comments": 10,
+      "tags": [
+        "Vue",
+        "Vue 3",
+        "Vue 2",
+        "Vue Router",
+        "Vuex"
+      ]
     }
   ]
 }

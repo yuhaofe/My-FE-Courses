@@ -244,8 +244,8 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
 
-    > *:not(:first-child) {
-      margin-left: 5px;
+    > * {
+      margin: 3px;
     }
   }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-home">
     Home
     <CourseList />
   </div>
@@ -15,6 +15,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.page-home {
+  padding-bottom: 80px;
+}
 </style>
