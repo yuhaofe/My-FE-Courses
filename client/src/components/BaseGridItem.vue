@@ -1,11 +1,16 @@
 <template>
-  <div class="base-grid-item">
-    <img
-      :src="images[icon]"
-      :alt="text"
-    >
-    <span>{{ text }}</span>
-  </div>
+  <router-link
+    :to="to"
+    tag="div"
+  >
+    <div class="base-grid-item">
+      <img
+        :src="images[icon]"
+        :alt="text"
+      >
+      <span>{{ text }}</span>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -24,6 +29,10 @@ export default {
     text: {
       type: String,
       default: ''
+    },
+    to: {
+      type: String,
+      default: '/'
     }
   },
   data() {
