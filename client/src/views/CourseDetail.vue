@@ -1,11 +1,11 @@
 <template>
-  <div class="course-detail-wrapper">
+  <div class="page-wrapper">
     <div class="course-detail">
       <BaseNavBar
         :title="course.title"
         :show-back="true"
         :show-more="false"
-        @on-click-back="$router.go(-1)"
+        @on-click-back="navigateBack"
       />
       <template v-if="course.loading">
         <div class="course-detail-loading">
@@ -167,6 +167,12 @@ export default {
   },
   created() {
     this.$store.dispatch('courses/fetchCourse', this.$route.params.id)
+  },
+  methods: {
+    navigateBack() {
+      this.$store.dispatch('goBack')
+      this.$router.go(-1)
+    }
   }
 }
 </script>
@@ -175,11 +181,6 @@ export default {
 .course-detail {
   padding-top: 48px;
   padding-bottom: 80px;
-
-  &-wrapper {
-    width: 100%;
-    height: 100vh;
-  }
 
   &-loading {
     width: 100%;

@@ -2,7 +2,7 @@
   <div>
     <transition
       :name="transitionName"
-      mode="out-in"
+      mode="in-out"
     >
       <router-view />
     </transition>
@@ -27,14 +27,17 @@ export default {
     }
   },
   watch: {
-    '$route' (to, from) {
-      if (to.path.includes('course/')){
+    '$route' (to) {
+      const isBack = this.$store.state.isBack
+      const regex = /(course|tag)\//i
+      if (to.path.match(regex) && !isBack){
         this.transitionName = 'slide-in'
-      } else if (from.path.includes('course/')) {
+      } else if (isBack) {
         this.transitionName = 'slide-out'
       } else {
         this.transitionName = 'no-transition'
       }
+      this.$store.dispatch('resetBack')
     }
   },
   methods: {
@@ -60,6 +63,32 @@ export default {
   }
 
   .slide-in-enter, .slide-out-leave-to {
-    transform: translateX(100%)
+    transform: translateX(100%);
+    z-index: 1000;
+  }
+
+  .slide-in-enter-to, .slide-out-leave {
+    z-index: 1000;
+  }
+
+  .page-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 600px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow-y:scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .page-wrapper {
+      left: calc(50vw - 300px);
+    }
   }
 </style>

@@ -21,6 +21,11 @@ app.get('/course/:id', (req, res) => {
   res.send(course)
 })
 
+app.get('/courses/tag/:tag', (req, res) => {
+  const coursesByTag = courses.filter(c => c.tags.find(tag => tag.toLowerCase() === req.params.tag.toLowerCase()))
+  res.send(coursesByTag)
+})
+
 app.listen(3000, () => {
   console.log(`Server listening at http://localhost:3000`)
 })

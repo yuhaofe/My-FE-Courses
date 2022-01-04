@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from './views/HomePage'
 import CourseDetail from './views/CourseDetail'
+import CoursesFiltered from './views/CoursesFiltered'
 import FavoritesPage from './views/FavoritesPage'
 import MyPage from './views/MyPage'
 
@@ -15,6 +16,13 @@ const routes = [
   {
     path: '/course/:id',
     component: CourseDetail
+  },
+  {
+    path: '/tag/:tag',
+    component: CoursesFiltered,
+    props: route => ({ filter: {
+      tag: route.params.tag
+    }})
   },
   {
     path: '/favorites',

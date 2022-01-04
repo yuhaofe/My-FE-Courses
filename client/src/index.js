@@ -5,9 +5,11 @@ import store from './store'
 import BaseCard from './components/BaseCard'
 import BaseTag from './components/BaseTag'
 import BaseNavBar from './components/BaseNavBar'
+import BaseGrid from './components/BaseGrid'
+import BaseGridItem from './components/BaseGridItem'
 
 const baseComponents = {
-  BaseCard, BaseTag, BaseNavBar
+  BaseCard, BaseTag, BaseNavBar, BaseGrid, BaseGridItem
 }
 
 Object.entries(baseComponents)

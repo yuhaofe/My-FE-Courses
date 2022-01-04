@@ -15,13 +15,13 @@ export default {
   components: {
     CourseCard
   },
-  computed: {
-    courses() {
-      return this.$store.state.courses.courses
+  props: {
+    courses: {
+      type: Array,
+      default() {
+        return []
+      }
     }
-  },
-  created() {
-    this.$store.dispatch('courses/fetchCourses')
   }
 }
 </script>

@@ -1,5 +1,7 @@
 <template>
-  <div>My</div>
+  <div class="page-wrapper">
+    <div>My</div>
+  </div>
 </template>
 
 <script>
