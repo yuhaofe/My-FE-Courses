@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "DEBUG=express:router pm2-dev start src/server.js --ignore db.json"
+    "dev": "DEBUG=express:router pm2-dev start src/server.js --ignore db.json",
+    "prod": "pm2 start src/server.js"
   },
   "author": "",
   "license": "",
