@@ -25,6 +25,20 @@ const routes = [
     }})
   },
   {
+    path: '/search/',
+    component: CoursesFiltered,
+    props: () => ({ filter: {
+      search: ''
+    }})
+  },
+  {
+    path: '/search/:search',
+    component: CoursesFiltered,
+    props: route => ({ filter: {
+      search: route.params.search
+    }})
+  },
+  {
     path: '/favorites',
     component: FavoritesPage
   },

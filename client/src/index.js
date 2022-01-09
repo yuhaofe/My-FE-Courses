@@ -9,9 +9,10 @@ import BaseGrid from './components/BaseGrid'
 import BaseGridItem from './components/BaseGridItem'
 import BaseCarousel from './components/BaseCarousel'
 import BaseCarouselItem from './components/BaseCarouselItem'
+import BaseSearchBar from './components/BaseSearchBar'
 
 const baseComponents = {
-  BaseCard, BaseTag, BaseNavBar, BaseGrid, BaseGridItem, BaseCarousel, BaseCarouselItem
+  BaseCard, BaseTag, BaseNavBar, BaseGrid, BaseGridItem, BaseCarousel, BaseCarouselItem, BaseSearchBar
 }
 
 Object.entries(baseComponents)
