@@ -52,6 +52,7 @@ export default {
     height: 100vh;
     margin: 0px auto;
     background-color: #f4f4f4;
+    font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
   }
 
   * {
