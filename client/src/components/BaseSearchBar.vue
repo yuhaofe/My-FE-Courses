@@ -32,7 +32,6 @@ export default {
 
 <style lang="scss">
 .base-search-bar {
-  margin: 10px;
 
   input {
     border: 2px solid #6DB9E3;

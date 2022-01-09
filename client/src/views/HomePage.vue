@@ -1,7 +1,17 @@
 <template>
   <div class="page-wrapper">
     <div class="page-home">
-      <BaseSearchBar route-path="/search" />
+      <div class="page-home-header">
+        <div class="page-home-title">
+          <div
+            class="page-home-title-container"
+            :style="{ transform: `translateY(${-33.33 * (titleCurrent - 1)}%)`, transition: 'transform 1s'}"
+          >
+            <span>前端</span><span>课程</span><span>精选</span>
+          </div>
+        </div>
+        <BaseSearchBar route-path="/search" />
+      </div>
       <BaseCarousel :length="carouselItems.length">
         <BaseCarouselItem
           v-for="item in carouselItems"
@@ -50,6 +60,11 @@ export default {
   components: {
     CourseList
   },
+  data() {
+    return {
+      titleCurrent: 1
+    }
+  },
   computed: {
     courses() {
       return this.$store.state.courses.courses
@@ -64,14 +79,57 @@ export default {
   },
   created() {
     this.$store.dispatch('courses/fetchCourses')
+  },
+  mounted() {
+    const translate = () => {
+        if (this.titleCurrent >= 3) {
+          this.titleCurrent = 0
+        }
+        this.titleCurrent++
+        setTimeout(translate, 2000)
+      }
+      setTimeout(translate, 2000)
   }
 }
 </script>
 
 <style lang="scss">
 .page-home {
-  padding-top: 10px;
+  padding-top: 1px;
   padding-bottom: 80px;
-  background: linear-gradient(#6db9e3, #f4f4f4 400px);
+  background: linear-gradient(#6db9e3, #f4f4f4 300px);
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 40px;
+
+    > div:first-of-type {
+      flex: 0 0 auto;
+    }
+
+    > div:last-of-type {
+      flex: 1 1 auto;
+    }
+  }
+
+  &-title {
+    overflow-y: hidden;
+    padding: 0 5px;
+    margin-right: 5px;
+
+    &-container {
+      height: 300%;
+
+      > span {
+        height: 33.33%;
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
 }
 </style>
