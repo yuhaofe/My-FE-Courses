@@ -2,7 +2,7 @@
   <div class="page-wrapper">
     <div class="courses-filtered">
       <BaseNavBar
-        :title="filter.tag.toUpperCase()"
+        :title="title"
         :show-back="true"
         :show-more="false"
         @on-click-back="navigateBack"
@@ -37,11 +37,19 @@ export default {
   computed: {
     filteredCourses() {
       return this.$store.state.courses.filteredCourses
+    },
+    title() {
+      let title = ''
+      if (this.filter.tag) {
+        title = this.filter.tag.toUpperCase()
+      }  else if (this.filter.search != undefined) {
+        title = `"${this.filter.search}"的搜索结果`
+      }
+      return title
     }
   },
   created() {
     this.$store.dispatch('courses/setFilter', this.filter).then(() => {
-      console.log(this.$store.state.courses.filteredCourses)
       this.$store.dispatch('courses/fetchCoursesByFilter')
     })
   },

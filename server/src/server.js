@@ -23,7 +23,16 @@ app.get('/course/:id', (req, res) => {
 
 app.get('/courses/tag/:tag', (req, res) => {
   const coursesByTag = courses.filter(c => c.tags.find(tag => tag.toLowerCase() === req.params.tag.toLowerCase()))
-  res.send(coursesByTag)
+  res.send(coursesByTag.sort((a, b) => b.id - a.id))
+})
+
+app.get('/courses/search/', (req, res) => {
+  res.send(courses.sort((a, b) => b.id - a.id))
+})
+
+app.get('/courses/search/:search', (req, res) => {
+  const coursesBySearch = courses.filter(c => c.title.toLowerCase().includes(req.params.search.toLowerCase()))
+  res.send(coursesBySearch.sort((a, b) => b.id - a.id))
 })
 
 app.listen(3000, () => {

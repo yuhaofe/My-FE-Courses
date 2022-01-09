@@ -5,6 +5,7 @@ const state = () => ({
   filteredCourses: [],
   course: {},
   filter: {
+    search: '',
     tag: ''
   }
 })
@@ -57,10 +58,19 @@ const actions = {
       .catch(error => {
         console.log(error)
       })
+    } else if (state.filter.search != undefined) {
+      return CourseService.getCoursesBySearch(state.filter.search)
+      .then(courses => {
+        commit('SET_FILTEREDCOURSES', courses)
+        return courses
+      })
+      .catch(error => {
+        console.log(error)
+      })
     }
   },
   setFilter({ commit, state }, filter) {
-    if (filter.tag != state.filter.tag) {
+    if (filter.tag != state.filter.tag || filter.search != state.filter.search) {
       const coursesLoading = []
       coursesLoading.loading = true
       commit('SET_FILTEREDCOURSES', coursesLoading)

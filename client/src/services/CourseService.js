@@ -28,6 +28,16 @@ function getCoursesByTag(tag) {
   })
 }
 
+function getCoursesBySearch(search) {
+  return client.get('courses/search/' + search).then(response => {
+    if (response.status === 200) {
+      return response.data
+    } else {
+      return Promise.reject()
+    }
+  })
+}
+
 function getCourse(id) {
   return client.get('course/' + id).then(response => {
     if (response.status === 200) {
@@ -39,5 +49,5 @@ function getCourse(id) {
 }
 
 export default {
-  getCourses, getCoursesByTag, getCourse
+  getCourses, getCoursesByTag, getCoursesBySearch, getCourse
 }

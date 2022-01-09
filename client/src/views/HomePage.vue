@@ -1,6 +1,7 @@
 <template>
   <div class="page-wrapper">
     <div class="page-home">
+      <BaseSearchBar route-path="/search" />
       <BaseCarousel :length="carouselItems.length">
         <BaseCarouselItem
           v-for="item in carouselItems"
@@ -69,6 +70,8 @@ export default {
 
 <style lang="scss">
 .page-home {
+  padding-top: 10px;
   padding-bottom: 80px;
+  background: linear-gradient(#6db9e3, #f4f4f4 400px);
 }
 </style>
