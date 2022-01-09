@@ -1,7 +1,15 @@
 <template>
   <div class="page-wrapper">
     <div class="page-home">
-      Home
+      <BaseCarousel :length="carouselItems.length">
+        <BaseCarouselItem
+          v-for="item in carouselItems"
+          :key="item.to"
+          :image="item.image"
+          :title="item.title"
+          :to="item.to"
+        />
+      </BaseCarousel>
       <BaseGrid :col="5">
         <BaseGridItem
           icon="javascript"
@@ -44,6 +52,13 @@ export default {
   computed: {
     courses() {
       return this.$store.state.courses.courses
+    },
+    carouselItems() {
+      return this.$store.state.courses.courses.slice(0, 4).map(c => ({
+        image: c.cover,
+        title: c.title,
+        to: '/course/' + c.id
+      }))
     }
   },
   created() {
