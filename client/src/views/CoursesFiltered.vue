@@ -8,8 +8,13 @@
         @on-click-back="navigateBack"
       />
       <template v-if="filteredCourses.loading">
-        <div class="courses-filtered-loading">
+        <div class="courses-filtered-status">
           <span>加载中...</span>
+        </div>
+      </template>
+      <template v-else-if="filteredCourses.length === 0">
+        <div class="courses-filtered-status">
+          <span>暂无结果</span>
         </div>
       </template>
       <template v-else>
@@ -67,7 +72,7 @@ export default {
   padding-top: 58px;
   padding-bottom: 20px;
   
-  &-loading {
+  &-status {
     width: 100%;
     height: 100vh;
 
